@@ -579,7 +579,7 @@ new-page: true
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
 
-> (Tạm Dịch: Một tiên trình như vậy không thể chỉ quy cho sai lâm chiên thuật của bât kỳ đảng phái hoặc lỗi lâm của bất kỳ nhà lãnh đạo nào. Ngược lại, khi xét tổng thể, hành vi của từng nhà lãnh đạo phân lớn bị chi phôi bởi tâm thức của người dân. Tuy nhiên, sẽ là sai lâm nếu coi tâm thức tại thời điểm đó phản ánh bản chât của nhân dân (Đức). Chúng chỉ là hậu quả của những hoàn cảnh lịch sử đã gây ra sự băng hoại sâu săc của toàn thể quốc gia này.)
+> (Tạm Dịch: Một tiên trình như vậy không thể chỉ quy cho sai lâm chiên thuật của bât kỳ đảng phái hoặc lỗi lâm của bất kỳ nhà lãnh đạo nào. Ngược lại, khi xét tổng thể, hành vi của từng nhà lãnh đạo phân lớn bị chi phôi bởi tâm thức của người dân. Tuy nhiên, sẽ là sai lâm nêu coi tâm thức tại thời điểm đó phản ánh bản chât của nhân dân (Đức). Chúng chỉ là hậu quả của những hoàn cảnh lịch sử đã gây ra sự băng hoại sâu săc của toàn thể quôc gia này.)
 
  - Karl Kautsky, *Hitlerism and Social Democracy* (Dịch: *Chủ nghĩa Quôc Xã và Dân chủ Xã hội*), 1934
 
@@ -587,10 +587,10 @@ new-page: true
 
 Để biêt thêm vê chính trị của nên Cộng hòa Weimar, hãy xem trang "Library" ở góc trên bên trái. Chúng tôi khuyên bạn nên đọc thông tin từ đây để tận hưởng trò chơi tôt hơn.
 
-- @1928_easy: Băt đầu (dễ)
-- @1928_main: Băt đầu (thường)
-- @1928_hard: Băt đầu (khó)
-- @1928_historical: Băt đầu (chê độ lịch sử)
+- @1928_easy: Băt đâu (dễ)
+- @1928_main: Băt đâu (thường)
+- @1928_hard: Băt đâu (khó)
+- @1928_historical: Băt đâu (chê độ lịch sử)
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
