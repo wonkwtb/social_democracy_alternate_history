@@ -10,9 +10,9 @@ go-to: start_menu_2
 
 @start_menu_2
 
-- @start: Bắt đầu
-- @election_simulation: Mô phỏng bầu cử
-- @credits: Nguồn tài liệu
+- @start: Băt đâu
+- @election_simulation: Mô phỏng bâu cử
+- @credits: Nguôn tài liệu
 - @game_over.achievements
 
 
@@ -579,18 +579,18 @@ new-page: true
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
 
-(Tạm Dịch: Một tiến trình như vậy không thể chỉ quy cho sai lầm chiến thuật của bất kỳ đảng phái hoặc lỗi lầm của bất kỳ nhà lãnh đạo nào. Ngược lại, khi xét tổng thể, hành vi của từng nhà lãnh đạo phần lớn bị chi phối bởi tâm thức của người dân. Tuy nhiên, sẽ là sai lầm nếu coi tâm thức tại thời điểm đó phản ánh bản chất của nhân dân (Đức). Chúng chỉ là hậu quả của những hoàn cảnh lịch sử đã gây ra sự băng hoại sâu sắc của toàn thể quốc gia này.)
+> (Tạm Dịch: Một tiên trình như vậy không thể chỉ quy cho sai lâm chiên thuật của bât kỳ đảng phái hoặc lỗi lâm của bất kỳ nhà lãnh đạo nào. Ngược lại, khi xét tổng thể, hành vi của từng nhà lãnh đạo phân lớn bị chi phôi bởi tâm thức của người dân. Tuy nhiên, sẽ là sai lâm nếu coi tâm thức tại thời điểm đó phản ánh bản chât của nhân dân (Đức). Chúng chỉ là hậu quả của những hoàn cảnh lịch sử đã gây ra sự băng hoại sâu săc của toàn thể quốc gia này.)
 
- - Karl Kautsky, *Hitlerism and Social Democracy* (Dịch: *Chủ nghĩa Quốc Xã và Dân chủ Xã hội*), 1934
+ - Karl Kautsky, *Hitlerism and Social Democracy* (Dịch: *Chủ nghĩa Quôc Xã và Dân chủ Xã hội*), 1934
 
-Đây là trò chơi về lịch sử giả tưởng. Mặc dù tính khả thi là mối quan tâm lớn, bất kỳ sự khác biệt so với dòng sự kiện thực tế đều phải ít nhiều mang tính hư cấu. Dù vậy, vui lòng cho tác giả (Autumn Chen) biết nếu có bất kỳ sai sót đáng kể nào.
+Đây là trò chơi vê lịch sử giả tưởng. Mặc dù tính khả thi là môi quan tâm lớn, bât kỳ sự khác biệt so với dòng sự kiện thực tê đêu phải ít nhiêu mang tính hư câu. Dù vậy, vui lòng cho tác giả (Autumn Chen) biêt nêu có bât kỳ sai sót đáng kể nào.
 
-Để biết thêm về chính trị của nền Cộng hòa Weimar, hãy xem trang "Library" ở góc trên bên trái. Chúng tôi khuyên bạn nên đọc thông tin từ đây để tận hưởng trò chơi tốt hơn.
+Để biêt thêm vê chính trị của nên Cộng hòa Weimar, hãy xem trang "Library" ở góc trên bên trái. Chúng tôi khuyên bạn nên đọc thông tin từ đây để tận hưởng trò chơi tôt hơn.
 
-- @1928_easy: Bắt đầu (dễ)
-- @1928_main: Bắt đầu (thường)
-- @1928_hard: Bắt đầu (khó)
-- @1928_historical: Bắt đầu (chế độ lịch sử)
+- @1928_easy: Băt đầu (dễ)
+- @1928_main: Băt đầu (thường)
+- @1928_hard: Băt đầu (khó)
+- @1928_historical: Băt đầu (chê độ lịch sử)
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
@@ -601,7 +601,7 @@ on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformi
 go-to: 1928_main
 
 @1928_historical
-subtitle: Tính năng save files và thăm dò ý kiến sẽ bị vô hiệu hóa. [? if not achievement_game_completed: Không khuyến khích cho tân thủ. ?]
+subtitle: Tính năng save files và thăm dò ý kiên sẽ bị vô hiệu hóa. [? if not achievement_game_completed: Không khuyên khích cho tân thủ. ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
@@ -627,8 +627,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-Đây là thời điểm tươi sáng cho nền dân chủ Đức. Sau một thời gian đấu tranh, lạm phát cuối cùng đã được kiểm soát và nền kinh tế đang tăng trưởng đều đặn. Về đối ngoại, chúng ta đã đạt được các thỏa thuận với các cường quốc phương Tây và Liên Xô, mang đến hy vọng về hòa bình lâu dài trở thành hiện thực. 
+Đây là thời điểm tươi sáng cho nên dân chủ Đức. Sau một thời gian đâu tranh, lạm phát đã được kiểm soát và kinh tế đang tăng trưởng đều đặn. Vê đôi ngoại, chúng ta đã đạt được các thỏa thuận với các cường quôc phương Tây và Liên Xô, mang hy vọng hòa bình lâu dài trở thành hiện thực. 
 
-Bây giờ, nhiệm vụ của đảng SPD là chuẩn bị cho cuộc bầu cử tiếp theo. Chính phủ cánh hữu tư sản của Wilhelm Marx không được lòng dân, tức chúng ta sẽ hưởng lợi. Hi vọng Dân chủ Xã hội sẽ đạt được nhiều thành tựu trong chính phủ tiếp theo.
+Bây giờ, nhiệm vụ của đảng SPD là chuẩn bị cho cuộc bâu cử tiêp theo. Chính phủ cánh hữu tư sản của Wilhelm Marx không được lòng dân, tức chúng ta sẽ hưởng lợi. Hi vọng Dân chủ Xã hội sẽ đạt được nhiêu thành tựu trong chính phủ tiêp theo.
 
 
