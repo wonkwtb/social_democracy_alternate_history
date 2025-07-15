@@ -29,7 +29,7 @@ Vị trí của đảng SPD: [? if spd_toleration : phe đôi lập ?][? if spd_
 
 Bât đông trong nội bộ: [+ dissent_percent : dissent +]
 
-= Government
+= Chính phủ
 
 Tổng thông: [+ president +]
 
@@ -57,7 +57,7 @@ Others: [+ other_r +]%
 
 [? if spd_in_government = 1 : Ngân sách: [+ budget +] ?]
 
-Cuộc bâu cử kế tiêp: [+ next_election_month : month +] [+ next_election_year +]
+Cuộc bâu cử kếtiêp: [+ next_election_month : month +] [+ next_election_year +]
 
 = Kinh tế
 
@@ -154,7 +154,7 @@ Q.nationalism_disp = Math.round(Q.nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
 !}
 
-= Kêt quả bâu cử dự đoán
+= Kết quả bầu cử dự đoán
 
 (nêu diễn ra ngay bây giờ):
 
@@ -176,7 +176,7 @@ NSDAP: [+ nsdap_votes +]%
 
 Others: [+ other_votes +]%
 
-**chi tiêt về từng nhóm cử tri**
+**Chi tiêt vềtừng nhóm cử tri**
 
 Công nhân: SPD: [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
