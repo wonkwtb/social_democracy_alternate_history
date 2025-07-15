@@ -119,21 +119,21 @@ if (Q.sa_strength) {
 
 = Lực lượng bán quân sự
 
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} - Sốlượng: [+ rb_strength_2 +] ngàn quân
 
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
+Reichsbanner - Tính quân sự hóa: [+ rb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} - Sốlượng: [+ rfb_strength_2 +] ngàn quân
 
-RFB Militarization: [+ rfb_militancy : militancy +]
+RFB - Tính quân sự hóa: [+ rfb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} - Sốlượng: [+ sh_strength_2 +] ngàn quân
 
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
+Stahlhelm - Tính quân sự hóa: [+ sh_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
+{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} - Sốlượng: [+ sa_strength_2 +] ngàn quân
 
-SA Militarization: [+ sa_militancy : militancy +]
+SA - Tính quân sự hóa: [+ sa_militancy : militancy +]
 
 = Lực lượng chính quy
 
