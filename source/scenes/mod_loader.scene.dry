@@ -60,11 +60,11 @@ submit.onclick = function() {
 };
 !}
 
-Curated mods:
+Các bản Mod (chưa dịch):
 
 {!<div id="mods_list"></div>!}
 
-Enter a mod's URL:
+Nhập địa chỉ URL của bản mod để truy cập:
 
 {!<input type="text" size="25" id="mod_url" name="mod_url"/> <button id="submit">Submit</button>!}
 
