@@ -68,4 +68,4 @@ Nhập địa chỉ URL của bản mod để truy cập:
 
 {!<input type="text" size="25" id="mod_url" name="mod_url"/> <button id="submit">Submit</button>!}
 
-- @backSpecialScene: Back
+- @backSpecialScene: Quay lại
