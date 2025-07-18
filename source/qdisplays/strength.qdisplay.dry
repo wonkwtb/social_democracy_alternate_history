@@ -2,7 +2,7 @@
 # faction strength
 
 (0..10) yếu
-(10..25) tương đối
+(10..25) tương đôi
 (25..40) mạnh
 (40..60) rât mạnh
 (60..) áp đảo
