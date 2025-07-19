@@ -3,33 +3,32 @@ new-page: true
 is-special: true
 go-to: menu
 
-= The Library
+= Thư viện
 
-Herein contains relevant information about the government and politics of the German republic.
+Thông tin về chính trị của nền Cộng hòa Weimar, tức nước Đức giữa hai cuộc Thế chiến.
 
 @menu
 
-- @government: Germany's system of government
-- @weimar_timeline: Timeline of the Weimar Republic before 1928
-- @curr_gov: Current government details
-- @demographics: Demographics
-- @parties: Parties
-- @public_opinion: Public opinion (and projected election results)
-- @paramilitaries: Paramilitary groups
-- @factions: Internal factions
-- @figures: Figures and charts
-- @backSpecialScene: Exit library.
+- @government: Hệ thông chính phủ Đức
+- @weimar_timeline: Lịch sử đảng SPD cho đên năm 1928
+- @curr_gov: Chính phủ đương nhiệm
+- @demographics: Nhóm cử tri
+- @parties: Đảng phái
+- @paramilitaries: Lực lượng bán quân sự
+- @factions: Nội bộ đảng SPD
+- @figures: Số liệu và biểu đồ
+- @backSpecialScene: Rời thư viện.
 
 @government
 go-to: menu
 
-The German Republic, called by some of our detractors as the "Weimar Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Reichstag. The Reichstag is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
+Nền cộng hòa đầu tiên của Đức hay "Cộng hòa Weimar" là một nước cộng hòa nghị viện có tổng thống, trong đó Reichstag – Quốc Hội chịu trách nhiệm điều hành nhưng Tổng thống cũng có một số quyền hành nhất định.
 
-The Reichstag is elected based on a proportional representation system, giving parties seats roughly proportional to their vote share in each electoral district. The Reichstag then elects the Chancellor and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
+Sau mỗi cuộc bầu cử Quốc hội, các đảng được trao số ghế tương ứng với số phiếu bầu. Sau đó Thủ Tướng thành lập Nội Các để điều hành chính phủ và Quốc hội bỏ phiếu tín nhiệm cho cả hai. Nội Các có thể bị giải thể bất cứ lúc nào nếu bị mất tín nhiệm, dẫn đến một cuộc bầu cử Quốc hội mới.
 
-The President is elected by a national direct vote, in two rounds. The second round is used if the first round does not result in a majority for one candidate; the candidate who receives a plurality in the second round becomes president (there is no obligation for weaker candidates to drop out). The role of the president is mostly to represent Germany, but he also has some crucial governing powers. The president and chancellor can together use emergency decrees to govern, bypassing the Reichstag. The president can also appoint or remove a chancellor when a parliamentary majority is unable to be established, and can thus influence the formation of a government.
+Tổng thống có nhiệm kỳ bảy năm và được bầu trực tiếp ở toàn quốc. Vòng thứ hai được sử dụng nếu không ai giành được đa số ở vòng đầu; ứng cử viên có nhiều số phiếu nhất ở vòng hai sẽ thắng cử. Tổng thống và Thủ tướng có thể cùng nhau dùng các Sắc lệnh Khẩn cấp để ban hành chính sách mà không cần Quốc hội. Tổng thống cũng là người bổ nhiệm hoặc bãi nhiệm Thủ tướng cho chính quyền thiểu số.
 
-Germany is divided into a number of states, each of which have their own governments with some responsibilities. By far the largest and most important state is Prussia.
+Nền Cộng hòa Weimar theo mô hình liên bang, với tiểu bang lớn nhất và quan trọng nhất là Phổ. Chính quyền trung ương có thể phát động một Reichsexekution để giải thể chính quyền tiểu bang.
 
 @weimar_timeline
 go-to: menu
@@ -63,7 +62,7 @@ go-to: menu
 @curr_gov
 go-to: cabinet if spd_in_government; menu if not spd_in_government
 
-= Current Government
+= Chính phủ đương nhiệm
 
 President: [+ president +]
 
@@ -333,7 +332,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 
 
 @figures
-title: Figures and Charts
+title: Số liệu và biểu đồ
 go-to: menu
 on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
@@ -451,7 +450,7 @@ if (d3 && window) {
 }
 !}
 
-= Reichstag composition
+= Tổ hợp Quôc hội
 
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
@@ -477,19 +476,19 @@ if (d3 && window) {
 {!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}
 {!</table>!}
 
-= Election history
+= Lịch sử bâu cử
 
-[? if year = 1928 and month < 5 : No new elections yet. ?]
+[? if year = 1928 and month < 5 : Chưa có. ?]
 
 {!<svg id="election_history" style="width: 500px; height: 400px;"> </svg>!}
 
-= Party support history
+= Sự ủng hộ đảng SPD theo thời gian
 
 [? if historical_mode: Not available in historical mode. ?]
 
 {!<svg id="party_support_history" style="width: 500px; height: 400px;"> </svg>!}
 
-= Economic history
+= Nên kinh tế theo thời gian
 
 {!<svg id="economic_history" style="width: 500px; height: 300px;"> </svg>!}
 # TODO: maybe add textual histories too? some accessibility stuff as well...
