@@ -23,7 +23,7 @@ The Iron Front is our new antifascist coordination front, consisting of the SPD,
 @defense
 subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
+on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode;
 
 The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
 
@@ -31,12 +31,12 @@ The Iron Front rallies for the militant defense of the republic against the fasc
 
 
 @pacifism
-on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; workers_spd += 5*(1-dissent) if pacifism >= 4; unemployed_spd += 4*(1-dissent) if pacifism >= 4; new_middle_spd += 4*(1-dissent) if pacifism >= 4
+on-arrival: nationalism -= 5*(1-dissent); pacifism += 1; workers_spd += 5*pacifism*(1-dissent)/4 if pacifism >= 4; unemployed_spd += 4*pacifism*(1-dissent)/4 if pacifism >= 4; new_middle_spd += 4*pacifism*(1-dissent)/4 if pacifism >= 4;
 
 The Iron Front rallies against nationalism and war.
 
 @republic
-on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*(1-dissent) if democratization >= 4; unemployed_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 4*(1-dissent) if democratization >= 4
+on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*democratization*(1-dissent)/4 if democratization >= 4; unemployed_spd += 4*democratization*(1-dissent)/4 if democratization >= 4; new_middle_spd += 4*democratization*(1-dissent)/4 if democratization >= 4;
 
 The Iron Front rallies in defense of the democratic republic and against dictatorship.
 
@@ -51,7 +51,7 @@ The WTB-Plan is the rallying point for the entire SPD and its affiliated organiz
 @antisemitism
 title: Rally against antisemitism and in defense of Jewish Germans.
 view-if: confronting_antisemitism > 1
-on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent);
+on-arrival: confronting_antisemitism += 1; nationalism -= 4*confronting_antisemitism*(1-dissent)/3; pro_republic += confronting_antisemitism*(1-dissent); workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent); new_middle_ddp += 4*(1-dissent);
 
 # TODO
 The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.
