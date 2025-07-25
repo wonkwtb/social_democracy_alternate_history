@@ -91,7 +91,7 @@ on-arrival: reformist_strength += 3; labor_strength += 4; reformist_dissent -= 3
 The reformist message appeals to the organized workers, whose benefits are the accomplishments of social democracy. [? if welfare > 1 : Our achievements in expanding welfare have made this message more effective. ?]
 
 @democracy
-on-arrival: democratization += 1; pro_republic += 2*democratization*(1 - dissent); workers_spd += democratization*pro_republic*(1-dissent)/300; unemployed_spd += democratization*pro_republic*(1-dissent)/300; new_middle_spd += democratization*pro_republic*(1-dissent)/300; workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3;
+on-arrival: democratization += 1; pro_republic += 2*democratization*(1-dissent); workers_spd += democratization*pro_republic*(1-dissent)/300; unemployed_spd += democratization*pro_republic*(1-dissent)/300; new_middle_spd += democratization*pro_republic*(1-dissent)/300; workers_spd += 4*(1-dissent) if democratization >= 3; unemployed_spd += 3*(1-dissent) if democratization >= 3; new_middle_spd += 4*(1-dissent) if democratization >= 3;
 
 Our speakers defend the republican system and rail against the monarchists and authoritarians who threaten it.
 
