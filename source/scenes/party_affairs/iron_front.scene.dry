@@ -31,12 +31,12 @@ The Iron Front rallies for the militant defense of the republic against the fasc
 
 
 @pacifism
-on-arrival: nationalism -= 5*(1-dissent); pacifism += 1; workers_spd += 5*pacifism*(1-dissent)/4 if pacifism >= 4; unemployed_spd += 4*pacifism*(1-dissent)/4 if pacifism >= 4; new_middle_spd += 4*pacifism*(1-dissent)/4 if pacifism >= 4;
+on-arrival: pacifism += 1; nationalism -= (4+pacifism/4)*(1-dissent); workers_spd += 5*pacifism*(1-dissent)/4 if pacifism >= 4; unemployed_spd += 4*pacifism*(1-dissent)/4 if pacifism >= 4; new_middle_spd += 4*pacifism*(1-dissent)/4 if pacifism >= 4;
 
 The Iron Front rallies against nationalism and war.
 
 @republic
-on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*democratization*(1-dissent)/4 if democratization >= 4; unemployed_spd += 4*democratization*(1-dissent)/4 if democratization >= 4; new_middle_spd += 4*democratization*(1-dissent)/4 if democratization >= 4;
+on-arrival: democratization += 1; pro_republic += (4+democratization/4)*(1-dissent); workers_spd += 5*democratization*(1-dissent)/4 if democratization >= 4; unemployed_spd += 4*democratization*(1-dissent)/4 if democratization >= 4; new_middle_spd += 4*democratization*(1-dissent)/4 if democratization >= 4;
 
 The Iron Front rallies in defense of the democratic republic and against dictatorship.
 
