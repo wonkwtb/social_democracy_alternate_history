@@ -1,9 +1,11 @@
 title: 1931
 subtitle: A new year 
+on-arrival: {!
 // increase NSDAP vote share 
 // if a public works program has started, unemployment is not so bad.
 // historical economic growth including the banking crisis: -7.7%
 // moved demographic changes to post_event
+!}
 tags: event
 view-if: year = 1931 and month = 1 
 priority: 2
