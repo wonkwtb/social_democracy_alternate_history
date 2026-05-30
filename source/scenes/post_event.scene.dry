@@ -505,11 +505,11 @@ if (Q.month_actions >= 1) {
             Q.workers_kpd -= 3/12;
             Q.sa_strength -= 200*(pro_republic/100)/12;
         }
-        if (Q.works_program_enacted = 0) {
+        if (Q.works_program_enacted == 0) {
             Q.works_program_enacted = 1;
             Q.works_program_timer += 12;
         }
-        if (Q.works_program > 1 && Q.works_program_enacted_2 = 0) {
+        if (Q.works_program > 1 && Q.works_program_enacted_2 == 0) {
             Q.works_program_enacted_2 = 1;
             Q.works_program_2_timer += 12;
         }
