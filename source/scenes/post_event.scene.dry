@@ -22,6 +22,24 @@ if (Q.pro_republic < 0) {
 if (Q.pro_republic >= 100) {
     Q.pro_republic = 99;
 }
+if (Q.socialism < 0) {
+    Q.socialism = 0;
+}
+if (Q.socialism >= 100) {
+    Q.socialism = 99;
+}
+if (Q.nationalism < 0) {
+    Q.nationalism = 0;
+}
+if (Q.nationalism >= 100) {
+    Q.nationalism = 99;
+}
+if (Q.reichswehr_loyalty < 0) {
+    Q.reichswehr_loyalty = 0;
+}
+if (Q.reichswehr_loyalty >= 1) {
+    Q.reichswehr_loyalty = 1;
+}
 // re-calculate party support
 // calculate normalized class voting for the achievements
 for (var c of Q.classes) {
@@ -71,8 +89,8 @@ for (var c of Q.factions) {
     }
 }
 
-if (Q.unemployed <= 1) {
-    Q.unemployed = 1;
+if (Q.unemployed < 0) {
+    Q.unemployed = 0;
 }
 
 // re-calculate dissent.
@@ -233,16 +251,9 @@ if (Q.month_actions >= 1) {
     }
     // accumulated economic growth/decline
     // Maybe there should be differences for positive/negative growth?
-    if (Q.economic_growth < 0) {
-        if (Q.economic_expansion > 0) {
-            Q.economic_expansion = 0;
-        } else {
-            Q.economic_expansion += Q.economic_growth;
-        }
-    }
-    if (Q.economic_growth > 0 && Q.reparations <= -2 && Q.spd_in_government) {
+    if (Q.reparations <= -2) {
         Q.economic_expansion += Q.economic_growth;
-    } else if (Q.economic_growth > 0 && Q.spd_in_government) {
+    } else {
         Q.economic_expansion += Q.economic_growth/2;
     }
     /////////////////////////////// update opinions based on economy
@@ -295,9 +306,15 @@ if (Q.month_actions >= 1) {
     }
 
     ////////////////////////// annual support changes
+    if (Q.year == 1928 && Q.month >= 10) Q.economic_growth -= 3/3;
     if (Q.year == 1929) {
         Q.unemployed += 3/12;
         Q.inflation -= 1/12;
+        if (Q.black_thursday_seen) {
+            Q.unemployed += 8.8/3;
+            Q.inflation -= 5/3;
+            Q.economic_growth -= 2/3;
+        }
         // increase NSDAP vote share
         Q.new_middle_nsdap += 10/12;
         Q.old_middle_nsdap += 10/12;
@@ -310,6 +327,9 @@ if (Q.month_actions >= 1) {
         Q.rural_nsdap += 10/12;
         Q.unemployed_nsdap += 18/12;
     } else if (Q.year == 1930) {
+        Q.unemployed += 6/12;
+        Q.inflation -= 5/12;
+        Q.economic_growth -= 5/12;
         Q.rural_nsdap += 10/12;
         Q.rural_dnvp -= 15/12;
         Q.new_middle_dvp -= 5/12;
@@ -332,6 +352,7 @@ if (Q.month_actions >= 1) {
             Q.workers_nsdap += 2/12;
             Q.workers_other += 5/12;
             Q.workers_kpd += 2/12;
+            Q.works_program_30_timer += 1;
         }
         Q.sa_strength += 100/12;
         Q.sh_strength += 100/12;
@@ -348,8 +369,11 @@ if (Q.month_actions >= 1) {
         Q.old_middle_nsdap += 10/12;
         Q.rural_other -= 5/12;
         Q.rural_nsdap += 9/12;
-        // TODO: economic policies should reduce NSDAP rurals
+        // economic policies should reduce NSDAP rurals
         if (!Q.works_program) {
+            Q.unemployed += 5/12; 
+            Q.inflation -= 2/12;
+            Q.economic_growth -= 1/12;
             Q.old_middle_dvp -= 6/12;
             Q.new_middle_dvp -= 6/12;
             Q.rural_dvp -= 6/12;
@@ -364,6 +388,7 @@ if (Q.month_actions >= 1) {
             Q.workers_kpd += 4/12;
             Q.sa_strength += 100/12;
             Q.sh_strength += 50/12;
+            Q.works_program_31_timer += 1;
         } else if (Q.unemployed > 15) {
             Q.old_middle_dvp -= 4/12;
             Q.new_middle_dvp -= 4/12;
@@ -398,6 +423,7 @@ if (Q.month_actions >= 1) {
             Q.new_middle_dvp -= 4/12;
             Q.old_middle_dvp -= 4/12;
             Q.rural_dvp -= 4/12;
+            Q.works_program_32_timer += 1;
         } else if (Q.unemployed > 25) {
             Q.rural_nsdap += 5/12;
             Q.unemployed_nsdap += 5/12;
@@ -437,6 +463,67 @@ if (Q.month_actions >= 1) {
             if (Q.spd_in_government) {
                 Q.workers_spd -= 4/12;
             }
+        }
+    }
+    // it's never too late for a works program
+    if (Q.works_program) {
+        if (Q.works_program_30_timer > 0) {
+            Q.works_program_30_timer -= 1;
+            Q.rural_nsdap -= 3/12;
+            Q.old_middle_nsdap -= 5/12;
+            Q.workers_nsdap -= 2/12;
+            Q.workers_other -= 5/12;
+            Q.workers_kpd -= 2/12;
+        }
+        if (Q.works_program_31_timer > 0) {
+            Q.works_program_31_timer -= 1;
+            Q.unemployed -= 5/12; 
+            Q.inflation += 2/12;
+            Q.economic_growth += 1/12;
+            Q.workers += 4/12;
+            Q.unemployed_nsdap -= 7/12;
+            Q.unemployed_kpd -= 2/12;
+            Q.rural_nsdap -= 12/12;
+            Q.new_middle_nsdap -= 12/12;
+            Q.old_middle_nsdap -= 12/12;
+            Q.workers_nsdap -= 2/12;
+            Q.workers_kpd -= 4/12;
+            Q.sa_strength -= 100*(pro_republic/100)/12;
+            Q.sh_strength -= 50*((100-nationalism)/100)/12;
+        }
+        if (Q.works_program_32_timer > 0) {
+            Q.works_program_32_timer -= 1;
+            Q.unemployed -= 5/12;
+            Q.inflation += 2/12;
+            Q.workers += 4/12;
+            Q.rural_nsdap -= 8/12;
+            Q.new_middle_nsdap -= 10/12;
+            Q.old_middle_nsdap -= 10/12;
+            Q.unemployed_nsdap -= 8/12;
+            Q.unemployed_kpd -= 2/12;
+            Q.workers_nsdap -= 3/12;
+            Q.workers_kpd -= 3/12;
+            Q.sa_strength -= 200*(pro_republic/100)/12;
+        }
+        if (Q.works_program_enacted = 0) {
+            Q.works_program_enacted = 1;
+            Q.works_program_timer += 12;
+        }
+        if (Q.works_program > 1 && Q.works_program_enacted_2 = 0) {
+            Q.works_program_enacted_2 = 1;
+            Q.works_program_2_timer += 12;
+        }
+        if (Q.works_program_timer > 0) {
+            Q.works_program_timer -= 1;
+            Q.unemployed -= 4/12;
+            Q.inflation += 3/12;
+            Q.economic_growth += 3.5/12;
+        }
+        if (Q.works_program_2_timer > 0) {
+            Q.works_program_2_timer -= 1;
+            Q.unemployed -= 1.5/12;
+            Q.inflation += 1/12;
+            Q.economic_growth += 1.5/12;
         }
     }
     // prevent forever support if the economy is bad

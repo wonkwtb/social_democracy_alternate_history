@@ -413,6 +413,8 @@ Q.agricultural_policy = 0;
 Q.land_reform = 0;
 // works-creation programs (i.e. WTB-plan) - how much have they implemented?
 Q.works_program = 0;
+Q.works_program_enacted = 0;
+Q.works_program_enacted_2 = 0;
 Q.wtb_implemented = 0;
 // Relations with the Western countries (France, UK).
 Q.west_relation = 0;
@@ -532,7 +534,11 @@ Q.sa_ban_timer = 0;
 Q.sh_ban_timer = 0;
 Q.kpd_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
-
+Q.works_program_timer = 0;
+Q.works_program_2_timer = 0;
+Q.works_program_30_timer = 0;
+Q.works_program_31_timer = 0;
+Q.works_program_32_timer = 0;
 
 // all the initial advisors are centrists.
 Q.wels_advisor = 1; // Otto Wels
